@@ -55,7 +55,7 @@ nav a {
     transition: color 0.3s ease;
 }
 
-header a::after {
+nav a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -68,11 +68,11 @@ header a::after {
     transition: transform 0.5s ease;
 }
 
-header a:hover::after {
+nav a:hover::after {
     transform: scaleX(1);
 }
 
-header a:hover {
+nav a:hover {
     color: var(--cor1);
 }
 
@@ -91,16 +91,26 @@ main{
         margin-bottom: 10%;
         align-items: center;
         text-align: center;
-        border: 5px solid var(--cor2);
+        border: 5px solid #1408c09f;
         border-radius: 5.5%;
         align-items: center;
         max-width: 100%;
+        box-sizing: border-box;
+
+        #ler-mais{
+            background-color: #B72EF2;
+            /*display: block;*/
+            /*width: 20%;*/
+        }
+        
 
         img{
             width: 100%;
             border-radius: 6% 6% 0% 0%;
         }
     }
+
+
 
     
 }
