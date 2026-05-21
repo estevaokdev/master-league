@@ -45,6 +45,9 @@ header {
 header nav {
     display: flex;
     gap: 25px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 nav a {
@@ -97,17 +100,37 @@ main{
         max-width: 100%;
         box-sizing: border-box;
 
+        
         #ler-mais{
             background-color: #B72EF2;
-            /*display: block;*/
-            /*width: 20%;*/
+            display: inline-block;
+            width: auto;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            margin: 1rem auto 5%;
+            text-align: center;
+            color: #fff;
+            font-weight: 600;
         }
         
+        #ler-mais:hover{
+            padding: 0.7rem 1.1rem;
+            transition-duration: 0.3s;
+        }
+
+        #ler-mais:not(:hover){
+            padding: 0.5rem 0.9rem;
+            transition-duration: 0.3s;
+        }
 
         img{
             width: 100%;
             border-radius: 6% 6% 0% 0%;
         }
+    }
+
+    article:hover{
+        margin: 80%;
     }
 
 
