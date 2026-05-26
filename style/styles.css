@@ -1,139 +1,209 @@
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @font-face {
-    font-family: 'Orbitron';
-    src: url(../fonts/orbitron/orbitron-black.otf);
+  font-family: "Orbitron";
+  src: url(../fonts/orbitron/orbitron-black.otf);
 }
 
+:root {
+  /*Cores*/
+  --cor1: #b72ef2;
+  --cor2: #570ff2;
+  --cor3: #1d1073;
+  --cor4: #0c0f40;
+  --cor5: #050a26;
 
-:root{
-    /*Cores*/
-    --cor1: #B72EF2;
-    --cor2: #570FF2;
-    --cor3: #1D1073;
-    --cor4: #0C0F40;
-    --cor5: #050A26;
-
-    /*Fontes*/
-    --fonte-titulos: "Orbitron", sans-serif;
-    --fonte-normal: "Open Sans", sans-serif;
+  /*Fontes*/
+  --fonte-titulos: "Orbitron", sans-serif;
+  --fonte-normal: "Open Sans", sans-serif;
 }
 
-body{
-    font-family: var(--fonte-normal);
-    background-color: var(--cor4);
-    margin: auto;
+body {
+  font-family: var(--fonte-normal);
+  background-color: var(--cor4);
+  margin: auto;
 }
 
 header {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--fonte-titulos);
-    background-color: var(--cor3);
-    box-shadow: 1px -1px 15px #b72ef267;
-    /*padding: 1rem 2rem;*/
-    position: sticky;
-    width: 100%;
-    height: 50px;
-    top: 0px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fonte-titulos);
+  background-color: var(--cor3);
+  box-shadow: 1px -1px 15px #b72ef267;
+  /*padding: 1rem 2rem;*/
+  position: sticky;
+  width: 100%;
+  height: 50px;
+  top: 0px;
+  z-index: 10;
 }
 
 header nav {
-    display: flex;
-    gap: 25px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 nav a {
-    position: relative;
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 100%;
-    height: 3px;
-    background: currentColor;
-    transform-origin: left;
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 3px;
+  background: currentColor;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
+nav a:hover::after, nav a:hover::after{
+  transform: scaleX(1);
 }
 
-nav a:hover {
-    color: var(--cor1);
+nav a:hover, nav a:active{
+  color: var(--cor1);
 }
 
-main{
-    margin: auto;
-    width: 88%;
+main {
+  margin: auto;
+  width: 88%;
+}
 
-    h2{
-        font-family: var(--fonte-titulos);
-        color: var(--cor1);
-        text-shadow: 0px 0px 5px var(--cor2);
-    }
+main h2 {
+  font-family: var(--fonte-titulos);
+  color: var(--cor1);
+  text-shadow: 0px 0px 5px var(--cor2);
+}
 
-    article{
-        background-color: #312296;
-        margin-bottom: 10%;
-        align-items: center;
-        text-align: center;
-        border: 5px solid #1408c09f;
-        border-radius: 5.5%;
-        align-items: center;
-        max-width: 100%;
-        box-sizing: border-box;
+main article {
+  background-color: #312296;
+  margin-bottom: 10%;
+  align-items: center;
+  text-align: center;
+  border: 5px solid #1408c09f;
+  border-radius: 5.5%;
+  width: 85%;
+  margin: auto auto 10% auto;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
 
-        
-        #ler-mais{
-            background-color: #B72EF2;
-            display: inline-block;
-            width: auto;
-            padding: 0.5rem 0.9rem;
-            border-radius: 6px;
-            margin: 1rem auto 5%;
-            text-align: center;
-            color: #fff;
-            font-weight: 600;
-        }
-        
-        #ler-mais:hover{
-            padding: 0.7rem 1.1rem;
-            transition-duration: 0.3s;
-        }
+#noticias a {
+  color: #050a26;
+  text-decoration: none;
+}
 
-        #ler-mais:not(:hover){
-            padding: 0.5rem 0.9rem;
-            transition-duration: 0.3s;
-        }
+#noticias a:hover {
+  color: #b72ef2;
+  transition-duration: 0.2s;
+}
 
-        img{
-            width: 100%;
-            border-radius: 6% 6% 0% 0%;
-        }
-    }
+#noticias a:not(:hover) {
+  transition-duration: 0.3s;
+}
 
-    article:hover{
-        margin: 80%;
-    }
+#ler-mais {
+  background-color: #b72ef2;
+  display: inline-block;
+  width: auto;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  margin: 1rem auto 5%;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+}
 
+#ler-mais:hover {
+  padding: 0.7rem 1.1rem;
+  transition-duration: 0.3s;
+}
 
+#ler-mais:not(:hover) {
+  padding: 0.5rem 0.9rem;
+  transition-duration: 0.3s;
+}
 
-    
+#noticias img {
+  width: 100%;
+  border-radius: 6% 6% 0% 0%;
+}
+
+#noticias article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Alinha a seção 'sobre' com a mesma largura e estilo dos artigos de notícias */
+#sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#sobre > article,
+#sobre > #recruta,
+#sobre > #analise {
+  width: 85%;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: #312296;
+  border: 5px solid #1408c09f;
+  border-radius: 2%;
+  padding: 1rem;
+  text-align: center;
+}
+
+#recruta,
+#analise {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#recruta img,
+#analise img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#FC {
+  text-decoration: none;
+  color: greenyellow;
+  font-weight: bolder;
+}
+
+#EF {
+  text-decoration: none;
+  color: rgb(47, 61, 255);
+  font-weight: bolder;
+}
+
+#FC:hover {
+  color: green;
+}
+
+#EF:hover {
+  color: rgba(0, 0, 255, 0.74);
 }
