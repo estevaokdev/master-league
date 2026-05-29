@@ -42,6 +42,13 @@ header {
   z-index: 10;
 }
 
+header img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 header nav {
   display: flex;
   gap: 25px;
@@ -119,6 +126,22 @@ main article {
   transition-duration: 0.3s;
 }
 
+#sobre > article > a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#sobre > article > a:hover h3 {
+  color: #b72ef2;
+  transition-duration: 0.2s;
+}
+
+#sobre > article > a:not(:hover) h3 {
+  transition-duration: 0.3s;
+}
+
 #ler-mais {
   background-color: #b72ef2;
   display: inline-block;
@@ -143,6 +166,9 @@ main article {
 
 #noticias img {
   width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 6% 6% 0% 0%;
 }
 
@@ -170,6 +196,27 @@ main article {
   border-radius: 2%;
   padding: 1rem;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#sobre > article:hover,
+#sobre > #recruta:hover,
+#sobre > #analise:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+#sobre > article:active,
+#sobre > #recruta:active,
+#sobre > #analise:active {
+  transform: translateY(-2px) scale(0.98);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#sobre > article:not(:hover),
+#sobre > #recruta:not(:hover),
+#sobre > #analise:not(:hover) {
+  transition-duration: 0.3s;
 }
 
 #recruta,
@@ -182,10 +229,17 @@ main article {
 
 #recruta img,
 #analise img {
-  width: 80%;
-  height: 80%;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
   border-radius: 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  header img { height: 34px; }
+  #recruta img, #analise img { width: 48px; height: 48px; }
+  #noticias img { max-height: 280px; }
 }
 
 #FC {
