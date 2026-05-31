@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Site de uma comunidade que reúne amantes de jogos e desportos, com foco no respeito e desenvolvimento " />
-    <meta name="keywords" content="palavras-chave" />
+    <meta name="keywords" content="Master, League, master-league, fc-mobile, liga-fc-mobile, liga" />
     <meta name="author" content="Estêvão Nsakala" />
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Título para compartilhamento" />
-    <meta property="og:description" content="Descrição para compartilhamento" />
-    <meta property="og:image" content="URL da imagem" />
+    <meta property="og:title" content="Master League  Hub" />
+    <meta property="og:description" content="Site da liga de FC Mobile - Master League" />
+    <meta property="og:image" content="/images/ML banner.png"/>
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Título para compartilhamento" />
-    <meta name="twitter:description" content="Descrição para compartilhamento" />
-    <meta name="twitter:image" content="URL da imagem" />
+    <meta name="twitter:title" content="Master League Hub" />
+    <meta name="twitter:description" content="Site da liga de FC Mobile - Master League" />
+    <meta name="twitter:image" content="/images/ML banner.png" />
     <title>Master League Hub</title>
     <link rel="shortcut icon" href="icons/ML (icon).ico" type="image/x-icon" />
     <link rel="stylesheet" href="style/styles.css" />
@@ -24,9 +24,10 @@
         <a href="#"><img src="images/ML Logo-alt.png" alt="Master League Hub" loading="eager"></a>
 
         <nav>
-            <a href="#noticias" class="navegacao">NOTÍCIAS</a>
 
-            <a href="#sobre" class="navegacao">SOBRE</a>
+            <a href="#inicio" class="navegacao">INÍCIO</a>
+
+            <!--<a href="sobre.html" class="navegacao">SOBRE</a>-->
 
             <a href="#links" class="navegacao">GRUPOS</a>
 
@@ -38,27 +39,22 @@
     <main>
 
         
-        <section id="noticias">
+        <section id="inicio">
             
             <h2>
-                DESTAQUES
+                CONHEÇA A LIGA
             </h2>
                 
             <article>
 
-                <a href=""><img src="images/bem-vindos.jpg" alt="Banner de boas-vindas à Master League Hub" loading="lazy"></a>
+                <img src="images/bem-vindos.jpg" alt="Banner de boas-vindas à Master League Hub" loading="lazy">
                 
-                <h3>
-                    <a href="">Sejam bem vindos à <strong>Master League Hub</strong></a>
-                </h3>
+                <h3>Bem-vindo à <strong>Master League Hub</strong></h3>
 
                 <p>
-                    É uma grande honra anunciar a abertura da Master League Hub. É um grande passo para a evolução da nossa liga...
+                    Somos uma comunidade dedicada ao respeito, desenvolvimento e competição nos jogos <a href="https://www.ea.com/games/ea-sports-fc/fc-mobile" target="_blank" rel="noopener noreferrer">FC Mobile</a> e <a href="https://www.konami.com/efootball/en/" target="_blank" rel="noopener noreferrer">eFootball</a>.
+                    Aqui você encontra o caminho para os grupos oficiais, oportunidades de recrutamento e muito mais.
                 </p>
-
-                <!--<a href="" >
-                    <div id="ler-mais">Ler Mais</div>
-                </a>-->
 
             </article>
 
@@ -66,22 +62,22 @@
 
         <section id="sobre">
                 <article>
-                    <a href="">
-                        <h3>Sobre Nós</h3>
+                    <a href="sobre.html">
+                        <h3>Sobre a liga</h3>
                     </a>
                 <p>
-                        Somos uma liga focada no respeito, desenvolvimento e competividade no cenário de jogos como o <a href="https://www.ea.com/games/ea-sports-fc/fc-mobile" id="FC" target="_blank">🔗FC Mobile</a> e o <a href="https://www.konami.com/efootball/en/" id="EF" target="_blank">🔗eFootball</a>.
+                        Em breve teremos uma página completa com nossa história, valores e como participar da Master League Hub. Por enquanto, use este espaço para conhecer a proposta da liga e acesse os grupos oficiais.
                     </p>
                 </article>
             
             <div id="recruta">
-                <a href=""><img src="images/Icone-grupo.png" alt="Ícone de grupo" loading="lazy"></a>
+                <img src="images/Icone-grupo.png" alt="Ícone de grupo" loading="lazy">
                 <h4>Recrutamento Aberto</h4>
                 <p>Buscamos jogadores com OVR/GER 120+ para o time principal</p>
             </div>
 
             <div id="analise">
-                <a href=""><img src="images/grafico-de-linha.png" alt="Gráfico de desempenho" loading="lazy"></a>
+                <img src="images/grafico-de-linha.png" alt="Gráfico de desempenho" loading="lazy">
                 <h4>Foco no desenvolvimento</h4>
                 <p>Procuramos sempre ajudar os jogadores a se desenvolverem e melhorarem</p>
             </div>
@@ -89,35 +85,42 @@
         </section>
 
         <section id="links">
-
-            <a href="">
-                
-            </a>
-            
-            <a href="">
-
-            </a>
-            
-            <a href="">
-
-            </a>
+            <h2>GRUPOS</h2>
+            <div class="groups-grid">
+                <a href="#" class="group-card">
+                    <img src="images/Icone-grupo.png" alt="Ícone do grupo WhatsApp">
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p>Entre no nosso grupo oficial do WhatsApp para receber avisos, escalações e notícias rápidas.</p>
+                    </div>
+                </a>
+                <a href="#" class="group-card">
+                    <img src="images/Icone-grupo.png" alt="Ícone do grupo Discord">
+                    <div>
+                        <h3>Discord</h3>
+                        <p>Junte-se ao servidor do Discord para conversar, combinar jogos e trocar estratégias com a equipe.</p>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer id="contatos">
-        <p>&copy;2026 MASTER LEAGUE</p>
-        <a href="">
+        <div class="footer-grid">
+            <p class="footer-brand">MASTER LEAGUE HUB</p>
 
-            <img src="" alt="">
-        </a>
-        <a href="">
+            <div class="footer-social">
+                <a href="#" aria-label="Instagram">
+                    <img src="images/instagram.png" alt="Ícone do Instagram">
+                </a>
+                <a href="#" aria-label="TikTok">
+                    <img src="images/tik-tok.png" alt="Ícone do TikTok">
+                </a>
+            </div>
 
-            <img src="" alt="">
-        </a>
-        <a href="">
-
-            <img src="" alt="">
-        </a>
+            <p class="footer-copy">&copy; 2026 MASTER LEAGUE</p>
+            <p class="footer-credit">Site criado por <strong><a href="#" class="footer-author-link">Estêvão Nsakala</a></strong></p>
+        </div>
     </footer>
 </body>
 </html>
