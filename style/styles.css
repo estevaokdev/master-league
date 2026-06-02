@@ -34,38 +34,48 @@ html, body {
 body {
   font-family: var(--fonte-normal);
   background-color: var(--cor4);
-  margin: auto;
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 header {
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-family: var(--fonte-titulos);
   background-color: var(--cor3);
   box-shadow: 1px -1px 15px #b72ef267;
-  /*padding: 1rem 2rem;*/
+  padding: 0.5rem 1rem;
   position: sticky;
   width: 100%;
-  height: 50px;
-  top: 0px;
+  top: 0;
   z-index: 10;
 }
 
 header img {
   height: auto;
   width: auto;
+  max-height: 48px;
   object-fit: contain;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
 header nav {
   display: flex;
-  gap: 25px;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
   align-items: center;
   justify-content: center;
+  width: auto;
 }
 
 nav a {
@@ -103,10 +113,10 @@ nav a:hover, nav a:active{
 }
 
 main {
-  margin: auto;
-  width: 88%;
+  width: min(100%, 1100px);
   max-width: 1100px;
-  padding-top: 1rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 0;
 }
 
 main h2 {
@@ -123,8 +133,9 @@ main article {
   text-align: center;
   border: 5px solid #1408c09f;
   border-radius: 5.5%;
-  width: 85%;
-  margin: auto auto 10% auto;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 10% auto;
   box-sizing: border-box;
   transition:
     transform 0.2s ease,
@@ -207,7 +218,8 @@ main article {
 #sobre > article,
 #sobre > #recruta,
 #sobre > #analise {
-  width: 85%;
+  width: 100%;
+  max-width: 900px;
   margin: auto;
   box-sizing: border-box;
   background-color: #312296;
@@ -241,6 +253,7 @@ main article {
 #recruta,
 #analise {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
   justify-content: flex-start;
@@ -253,6 +266,32 @@ main article {
   object-fit: cover;
   border-radius: 6px;
   flex-shrink: 0;
+}
+
+#recruta,
+#analise {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+#recruta,
+#analise,
+.group-card,
+.group-card > div,
+.group-card p {
+  min-width: 0;
+}
+
+.group-card {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.group-card > div {
+  flex: 1 1 0;
 }
 
 #links {
@@ -315,13 +354,77 @@ main article {
 @media (max-width: 900px) {
   .groups-grid {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .group-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    justify-content: center;
+  }
+
+  header nav {
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+  }
+
+  nav a {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  #recruta,
+  #analise {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #recruta img,
+  #analise img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .group-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+  }
+
+  .group-card > div {
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  header img { height: 34px; }
-  #recruta img, #analise img { width: 48px; height: 48px; }
-  #inicio img { max-height: 280px; }
+  header img {
+    max-height: 34px;
+  }
+
+  #recruta img,
+  #analise img {
+    width: 48px;
+    height: 48px;
+  }
+
+  #inicio img {
+    max-height: 280px;
+  }
+
+  main {
+    padding: 1rem 0.75rem 0;
+  }
+
+  .group-card {
+    gap: 0.75rem;
+  }
 }
 
 #FC {
